@@ -56,11 +56,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Red;
             this.label1.Location = new System.Drawing.Point(277, 125);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 15);
             this.label1.TabIndex = 2;
-            this.label1.Text = "label1";
+            this.label1.Text = price.ToString()+" zł";
             // 
             // Form1
             // 
@@ -83,5 +84,6 @@
         private Button button1;
         private Button button2;
         private Label label1;
+        private int price = 0;
     }
 }

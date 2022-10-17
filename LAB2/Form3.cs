@@ -16,5 +16,25 @@ namespace LAB2
         {
             InitializeComponent();
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+            comboBox1.Items.Add("Dell");
+            comboBox1.Items.Add("LG");
+            comboBox1.Items.Add("Samsung");
+            comboBox2.Items.Add("3440x1440px 34'");
+            comboBox2.Items.Add("2560x1440px 27'");
+            comboBox2.Items.Add("1920x1080px 24'");
+        }
     }
 }
