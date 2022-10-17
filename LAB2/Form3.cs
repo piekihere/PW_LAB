@@ -36,5 +36,10 @@ namespace LAB2
             comboBox2.Items.Add("2560x1440px 27'");
             comboBox2.Items.Add("1920x1080px 24'");
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

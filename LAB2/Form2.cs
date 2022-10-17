@@ -79,5 +79,10 @@ namespace LAB2
         {
             MessageBox.Show("dsadsa");
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
