@@ -23,7 +23,10 @@ namespace LAB2
             Form monitor = new Form3(this);
             monitor.Show();
         }
-        
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

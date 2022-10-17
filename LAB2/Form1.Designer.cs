@@ -39,7 +39,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
-            this.button1.Text = "KOMPUTER";
+            this.button1.Text = "Komputer";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -49,7 +49,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 1;
-            this.button2.Text = "MONITOR";
+            this.button2.Text = "Monitor";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -59,9 +59,10 @@
             this.label1.ForeColor = System.Drawing.Color.Red;
             this.label1.Location = new System.Drawing.Point(223, 96);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 15);
-            this.label1.Text = "0";
+            this.label1.Size = new System.Drawing.Size(13, 15);
             this.label1.TabIndex = 2;
+            this.label1.Text = "0";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Form1
             // 

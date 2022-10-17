@@ -170,7 +170,7 @@ namespace LAB2
            
             
             other.komputer = true;
-            other.label1.Text = partialPrice.ToString();
+            other.label1.Text = (Int32.Parse(other.label1.Text) + partialPrice).ToString();
             if (other.komputer == true && other.monitor == true)
             {
                 other.label1.ForeColor = System.Drawing.Color.Green;
