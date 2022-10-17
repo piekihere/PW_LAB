@@ -60,6 +60,7 @@
             this.label1.Location = new System.Drawing.Point(223, 96);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 15);
+            this.label1.Text = Globals.price.ToString();
             this.label1.TabIndex = 2;
             // 
             // Form1
@@ -71,7 +72,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Okienko";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -83,6 +84,5 @@
         private Button button1;
         private Button button2;
         private Label label1;
-        private int price = 0;
     }
 }

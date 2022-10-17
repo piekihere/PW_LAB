@@ -35,7 +35,10 @@ namespace LAB2
         {
 
         }
-
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            
+        }
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
 
@@ -47,11 +50,6 @@ namespace LAB2
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
 
         }
@@ -74,10 +72,6 @@ namespace LAB2
         private void label1_Click(object sender, EventArgs e)
         {
 
-        }
-        void Form2_Closing(object sender, EventArgs e)
-        {
-            MessageBox.Show("dsadsa");
         }
 
         private void button1_Click(object sender, EventArgs e)
