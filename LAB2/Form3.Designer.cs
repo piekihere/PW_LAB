@@ -30,7 +30,7 @@
         {
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.partialPriceLabel = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -52,14 +52,14 @@
             this.comboBox2.TabIndex = 1;
             this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
-            // label1
+            // partialPriceLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(112, 241);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 15);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "label1";
+            this.partialPriceLabel.AutoSize = true;
+            this.partialPriceLabel.Location = new System.Drawing.Point(112, 241);
+            this.partialPriceLabel.Name = "partialPriceLabel";
+            this.partialPriceLabel.Size = new System.Drawing.Size(38, 15);
+            this.partialPriceLabel.TabIndex = 2;
+            this.partialPriceLabel.Text = "label1";
             // 
             // button1
             // 
@@ -77,7 +77,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(274, 321);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.partialPriceLabel);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
             this.Name = "Form3";
@@ -92,7 +92,9 @@
 
         private ComboBox comboBox1;
         private ComboBox comboBox2;
-        private Label label1;
+        private Label partialPriceLabel;
         private Button button1;
+        private int insidePartialPrice = 0;
+        private int partialPrice = 0;
     }
 }

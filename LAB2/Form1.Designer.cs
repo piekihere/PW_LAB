@@ -60,7 +60,7 @@
             this.label1.Location = new System.Drawing.Point(223, 96);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 15);
-            this.label1.Text = Globals.price.ToString();
+            this.label1.Text = "0";
             this.label1.TabIndex = 2;
             // 
             // Form1
@@ -80,9 +80,11 @@
         }
 
         #endregion
-
         private Button button1;
         private Button button2;
-        private Label label1;
+        public Label label1;
+        public bool komputer = false;
+        public bool monitor = false;
+
     }
 }
