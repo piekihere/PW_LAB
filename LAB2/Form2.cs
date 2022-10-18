@@ -35,7 +35,7 @@ namespace LAB2
             comboBoxMap[0] = 499;
             comboBoxMap[1] = 399;
             comboBoxMap[2] = 0;
-            this.comboBox1.SelectedIndex = 0;
+            this.comboBox1.SelectedIndex = 2;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
