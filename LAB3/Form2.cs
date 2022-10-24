@@ -31,8 +31,7 @@ namespace LAB3
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Book ksiazka = new Book(textBox1.Text, textBox2.Text, Guid.NewGuid().ToString() );
-            other.dataGridView1.Rows.Add(ksiazka.getRow());
+            other.dataGridView1.Rows.Add(textBox1.Text, textBox2.Text, Guid.NewGuid().ToString());
             textBox1.Clear();
             textBox2.Clear();
             
