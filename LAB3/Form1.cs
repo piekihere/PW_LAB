@@ -1,3 +1,5 @@
+using System.Text;
+
 namespace LAB3
 {
     public partial class Form1 : Form
@@ -26,6 +28,11 @@ namespace LAB3
         {
             Form addWindow = new Form2(this);
             addWindow.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //TODO:
         }
     }
 }

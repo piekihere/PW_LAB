@@ -31,10 +31,11 @@ namespace LAB3
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string title = textBox1.Text;
-            string author = textBox2.Text;
-            string[] row = { title, author, "0" };
-            other.dataGridView1.Rows.Add(row);
+            Book ksiazka = new Book(textBox1.Text, textBox2.Text, Guid.NewGuid().ToString() );
+            other.dataGridView1.Rows.Add(ksiazka.getRow());
+            textBox1.Clear();
+            textBox2.Clear();
+            
             
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
