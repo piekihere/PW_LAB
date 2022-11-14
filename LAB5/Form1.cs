@@ -26,6 +26,8 @@ namespace LAB5
 
         private void button2_Click(object sender, EventArgs e)
         {
+            listView1.Items.Clear();
+            dictOfSeqs.Clear();
             for(int i = 0; i < textBox1.Text.ToString().Length - 3; i++)
             {
                 if(dictOfSeqs.ContainsKey(textBox1.Text.ToString().Substring(i, 4)))

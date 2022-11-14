@@ -95,7 +95,6 @@
         private Button button2;
         private TextBox textBox1;
         private ListView listView1;
-        public String seq="";
         public Dictionary<string, int> dictOfSeqs = new Dictionary<string, int>();
     }
 }
