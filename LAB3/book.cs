@@ -7,7 +7,7 @@ using System.Xml.Serialization;
 
 namespace LAB3
 {
-    public class book
+    public class Book
     {
         //[XmlAnyAttribute]
         public string tytul;

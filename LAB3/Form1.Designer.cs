@@ -213,6 +213,6 @@
         private DataGridViewTextBoxColumn Status_wypozyczenia;
         private Button button4;
         private Button button5;
-        public List<book> bookList =  new List<book>();
+        public List<Book> BookList =  new List<Book>();
     }
 }

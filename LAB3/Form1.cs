@@ -93,7 +93,7 @@ namespace LAB3
                         {
                             dataGridView1.Rows.Add(fieldList[i], fieldList[i + 1], fieldList[i + 2], fieldList[i+3], fieldList[i+4],
                                 fieldList[i + 5], fieldList[i+6]);
-                            book ksiazka = new book();
+                            Book ksiazka = new Book();
                             ksiazka.tytul = fieldList[i];
                             ksiazka.autor = fieldList[i+1];
                             ksiazka.id = fieldList[i+2];
@@ -101,7 +101,7 @@ namespace LAB3
                             ksiazka.miasto = fieldList[i+4];
                             ksiazka.rok = fieldList[i+5];
                             ksiazka.status_wypozyczenia = fieldList[i+6];
-                            bookList.Add(ksiazka);
+                            BookList.Add(ksiazka);
                         }
 
                     }
@@ -113,26 +113,27 @@ namespace LAB3
         private void button4_Click(object sender, EventArgs e)//save
         {
             SaveFileDialog SaveFileDialog1 = new SaveFileDialog();
-            XmlSerializer serializer = new XmlSerializer(typeof(List<book>));
+            XmlSerializer serializer = new XmlSerializer(typeof(List<Book>));
             
             if (SaveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 TextWriter writer = new StreamWriter(SaveFileDialog1.FileName);
-                serializer.Serialize(writer, bookList);
+                serializer.Serialize(writer, BookList);
                 writer.Close();
             }
         }
 
         private void button5_Click(object sender, EventArgs e)//load
         {
+            dataGridView1.Rows.Clear();
             OpenFileDialog OpenFileDialog1 = new OpenFileDialog();
-            XmlSerializer serializer = new XmlSerializer(typeof(List<book>));
+            XmlSerializer serializer = new XmlSerializer(typeof(List<Book>));
             if (OpenFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 TextReader reader = new StreamReader(OpenFileDialog1.FileName);
-                bookList = (List<book>)serializer.Deserialize(reader);
+                BookList = (List<Book>)serializer.Deserialize(reader);
             }
-            foreach (book b in bookList)
+            foreach (Book b in BookList)
             {
                 dataGridView1.Rows.Add(b.tytul, b.autor, b.id, b.wydawnictwo, b.miasto, b.rok, b.status_wypozyczenia);
             }
