@@ -28,13 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Tytuł = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Autor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Wydawnictwo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Miasto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Rok = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status_wypozyczenia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,16 +50,26 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Tytuł,
             this.Autor,
-            this.ID});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 21);
+            this.ID,
+            this.Wydawnictwo,
+            this.Miasto,
+            this.Rok,
+            this.Status_wypozyczenia});
+            this.dataGridView1.Location = new System.Drawing.Point(26, 21);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(483, 426);
+            this.dataGridView1.Size = new System.Drawing.Size(847, 426);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -75,13 +92,37 @@
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
             // 
+            // Wydawnictwo
+            // 
+            this.Wydawnictwo.HeaderText = "Wydawnictwo";
+            this.Wydawnictwo.Name = "Wydawnictwo";
+            this.Wydawnictwo.ReadOnly = true;
+            // 
+            // Miasto
+            // 
+            this.Miasto.HeaderText = "Miasto";
+            this.Miasto.Name = "Miasto";
+            this.Miasto.ReadOnly = true;
+            // 
+            // Rok
+            // 
+            this.Rok.HeaderText = "Rok";
+            this.Rok.Name = "Rok";
+            this.Rok.ReadOnly = true;
+            // 
+            // Status_wypozyczenia
+            // 
+            this.Status_wypozyczenia.HeaderText = "Status wypożyczenia";
+            this.Status_wypozyczenia.Name = "Status_wypozyczenia";
+            this.Status_wypozyczenia.ReadOnly = true;
+            // 
             // button1
             // 
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button1.Location = new System.Drawing.Point(12, 454);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(129, 40);
+            this.button1.Size = new System.Drawing.Size(130, 40);
             this.button1.TabIndex = 1;
             this.button1.Text = "Zapisz do .CSV";
             this.button1.UseVisualStyleBackColor = true;
@@ -91,9 +132,9 @@
             // 
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(192, 454);
+            this.button2.Location = new System.Drawing.Point(188, 454);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(134, 40);
+            this.button2.Size = new System.Drawing.Size(130, 40);
             this.button2.TabIndex = 2;
             this.button2.Text = "Odczyt z .CSV";
             this.button2.UseVisualStyleBackColor = true;
@@ -108,26 +149,48 @@
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button3.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button3.Location = new System.Drawing.Point(379, 454);
+            this.button3.Location = new System.Drawing.Point(361, 454);
             this.button3.Name = "button3";
             this.button3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button3.Size = new System.Drawing.Size(116, 40);
+            this.button3.Size = new System.Drawing.Size(134, 40);
             this.button3.TabIndex = 3;
             this.button3.Text = "+";
             this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(537, 456);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(129, 38);
+            this.button4.TabIndex = 4;
+            this.button4.Text = "Serializator";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(706, 456);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(129, 38);
+            this.button5.TabIndex = 5;
+            this.button5.Text = "Deserializator";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(507, 505);
+            this.ClientSize = new System.Drawing.Size(885, 505);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
-            this.MaximumSize = new System.Drawing.Size(570, 545);
+            this.MaximumSize = new System.Drawing.Size(1000, 1000);
             this.MinimumSize = new System.Drawing.Size(523, 544);
             this.Name = "Form1";
             this.Text = "Edytor plików CSV";
@@ -146,5 +209,12 @@
         private Button button1;
         private Button button2;
         private Button button3;
+        private DataGridViewTextBoxColumn Wydawnictwo;
+        private DataGridViewTextBoxColumn Miasto;
+        private DataGridViewTextBoxColumn Rok;
+        private DataGridViewTextBoxColumn Status_wypozyczenia;
+        private Button button4;
+        private Button button5;
+        public List<book> bookList =  new List<book>();
     }
 }

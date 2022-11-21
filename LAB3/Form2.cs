@@ -31,9 +31,23 @@ namespace LAB3
 
         private void button1_Click(object sender, EventArgs e)
         {
-            other.dataGridView1.Rows.Add(textBox1.Text, textBox2.Text, Guid.NewGuid().ToString());
+            other.dataGridView1.Rows.Add(textBox1.Text, textBox2.Text, Guid.NewGuid().ToString(), textBox3.Text,
+                textBox4.Text, textBox5.Text, textBox6.Text);
+            book ksiazka = new book();
+            ksiazka.tytul = textBox1.Text;
+            ksiazka.autor = textBox2.Text;
+            ksiazka.id = Guid.NewGuid().ToString();
+            ksiazka.wydawnictwo = textBox3.Text;
+            ksiazka.miasto = textBox4.Text;
+            ksiazka.rok = textBox5.Text;
+            ksiazka.status_wypozyczenia = textBox6.Text;
+            other.bookList.Add(ksiazka);
             textBox1.Clear();
             textBox2.Clear();
+            textBox3.Clear();
+            textBox4.Clear();
+            textBox5.Clear();
+            textBox6.Clear();
             
             
         }
@@ -53,6 +67,11 @@ namespace LAB3
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }
