@@ -60,17 +60,15 @@ namespace template
         {
             if (dataGridView1.Rows.Count > 0 && dataGridView1.SelectedRows.Count > 0)
             {
-                string id = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
-                dataGridView1.Rows.RemoveAt(dataGridView1.SelectedRows[0].Index);
                 foreach (Book book in BookList)
                 {
-                    if (book.id == id )
+                    if (book.id == dataGridView1.SelectedRows[0].Cells[3].Value.ToString())
                     {
                         BookList.Remove(book);
                         break;
                     }
                 }
-                
+                dataGridView1.Rows.RemoveAt(dataGridView1.SelectedRows[0].Index);
 
             }
             dataGridView1.ClearSelection();
@@ -147,10 +145,9 @@ namespace template
         {
             if (dataGridView2.Rows.Count > 0 && dataGridView2.SelectedRows.Count > 0)
             {
-                string id = dataGridView2.SelectedRows[0].Cells[2].Value.ToString();
                 foreach (User user in UserList)
                 {
-                    if (user.id == id)
+                    if (user.id == dataGridView2.SelectedRows[0].Cells[2].Value.ToString())
                     {
                         UserList.Remove(user);
                         break;
