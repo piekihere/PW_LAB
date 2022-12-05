@@ -1,6 +1,6 @@
 ﻿namespace LAB8
 {
-    partial class Form2
+    partial class Results
     {
         /// <summary>
         /// Required designer variable.
@@ -28,36 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 1;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(12, 0);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(12, 51);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(118, 25);
+            this.label1.Size = new System.Drawing.Size(130, 54);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Time left: 0:0";
+            this.label1.Text = "label1";
             // 
-            // Form2
+            // Results
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(517, 410);
+            this.ClientSize = new System.Drawing.Size(266, 162);
             this.Controls.Add(this.label1);
-            this.Name = "Form2";
-            this.Text = "GRA";
-            this.Load += new System.EventHandler(this.Form2_Load);
+            this.Name = "Results";
+            this.Text = "Results";
+            this.Load += new System.EventHandler(this.Results_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -65,7 +57,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Timer timer1;
         private Label label1;
     }
 }

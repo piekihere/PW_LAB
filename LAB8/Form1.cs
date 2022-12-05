@@ -29,8 +29,10 @@ namespace LAB8
         {
             string size = comboBox2.Text;
             string animal = comboBox1.Text;
-            Form gameWindow = new Form2(this,size,animal);
+            Form gameWindow = new Form2(this, size, animal);
             gameWindow.ShowDialog();
+            
+            
         }
     }
 }

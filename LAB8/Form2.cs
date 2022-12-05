@@ -1,9 +1,12 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.Devices;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
+using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,6 +20,8 @@ namespace LAB8
         private int size;
         private int row;
         private int col;
+        private bool flag = false;
+        private Stopwatch timer = new Stopwatch();
         public Form2(Form1 other, string size, string animal)
         {
             InitializeComponent();
@@ -26,7 +31,7 @@ namespace LAB8
 
 
         }
-        private void initializeButtons(int size)
+        private void initializeButtons(int size,int row,int col)
         {
 
 
@@ -35,7 +40,7 @@ namespace LAB8
                 for(int j = 0;j < size; j++)
                 {
                     Button button1 = new Button();
-                    button1.Location = new System.Drawing.Point(i * 75, j * 75);
+                    button1.Location = new System.Drawing.Point(i * 75, 30+j * 75);
                     button1.Size = new System.Drawing.Size(75, 75);
                     button1.Text = "";
                     button1.Name = i + "," + j;
@@ -57,19 +62,75 @@ namespace LAB8
             int row = rnd.Next(0, size);
             int col = rnd.Next(0, size);
             //this.ClientSize = new System.Drawing.Size(size*100, size*100);
-            initializeButtons(size);
+            initializeButtons(size,row, col);
             this.AutoSize = true;
             this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
 
         }
         private void createButton_MouseEnter(object sender, EventArgs e)
         {
-            Button currentButton = sender as Button;
-            string name = currentButton.Name;
-            if (name == "WYGRANA")
+            if(!flag)
             {
-                this.Close();
+                timer.Start();
+                flag = true;
+            }
+            Button currentButton = sender as Button; 
+            if (currentButton.Name == "WYGRANA")
+            {
+                timer.Stop();
+                currentButton.Text = animal;
+                if(animal == "Krokodyl")
+                {
+                    DisableButtons();
+                    Random rnd = new Random();
+                    int prob = rnd.Next(100);
+                    if(prob < 50)
+                    {
+                        Results result = new Results(this, false);
+                        result.Show();
+                    }
+                    else
+                    {
+                        Results result = new Results(this, true);
+                        result.Show();
+                    }
+                }
+                else
+                {
+                    timer.Stop();
+                    DisableButtons();
+                    Results result = new Results(this, true);
+                    result.Show();
+                }
+            }
+            else
+            {
+                currentButton.Text = "X";
             }
 }
+        void DisableButtons()
+        {
+            foreach (Control c in Controls)
+            {
+                Button b = c as Button;
+                if (b != null)
+                {
+                    b.Enabled = false;
+                }
+            }
+        }
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            TimeSpan ts = timer.Elapsed;
+            label1.Text = String.Format("Time left: {0}.{1}s",ts.Seconds,ts.Milliseconds / 10);
+            if (ts.Seconds == 3)
+            {
+                timer1.Stop();
+                timer.Stop();
+                DisableButtons();
+                Results result = new Results(this, false);
+                result.Show();
+            }
+        }
     }
 }
