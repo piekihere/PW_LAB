@@ -122,7 +122,7 @@ namespace LAB8
         private void timer1_Tick(object sender, EventArgs e)
         {
             TimeSpan ts = timer.Elapsed;
-            label1.Text = String.Format("Time left: {0}.{1}s",ts.Seconds,ts.Milliseconds / 10);
+            label1.Text = String.Format("Time passed: {0}.{1}s",ts.Seconds,ts.Milliseconds / 10);
             if (ts.Seconds == 3)
             {
                 timer1.Stop();

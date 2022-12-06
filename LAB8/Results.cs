@@ -33,7 +33,6 @@ namespace LAB8
                 BackColor = Color.Red;
                 label1.Text = "PRZEGRANA";
             }
-            other.Close();
         }
     }
 }
