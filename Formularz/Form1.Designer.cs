@@ -30,6 +30,7 @@ namespace Formularz
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -79,6 +80,10 @@ namespace Formularz
             this.textBox21 = new System.Windows.Forms.TextBox();
             this.textBox22 = new System.Windows.Forms.TextBox();
             this.textBox23 = new System.Windows.Forms.TextBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -274,9 +279,9 @@ namespace Formularz
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(117, 30);
+            this.textBox1.Location = new System.Drawing.Point(117, 35);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(149, 23);
+            this.textBox1.Size = new System.Drawing.Size(152, 23);
             this.textBox1.TabIndex = 21;
             // 
             // textBox3
@@ -439,7 +444,7 @@ namespace Formularz
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 43;
-            this.button1.Text = "button1";
+            this.button1.Text = "Zapisz";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -449,7 +454,7 @@ namespace Formularz
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 44;
-            this.button2.Text = "button2";
+            this.button2.Text = "Wczytaj";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -496,11 +501,48 @@ namespace Formularz
             this.textBox23.Size = new System.Drawing.Size(100, 23);
             this.textBox23.TabIndex = 49;
             // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label22.ForeColor = System.Drawing.Color.DarkRed;
+            this.label22.Location = new System.Drawing.Point(117, 169);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(44, 13);
+            this.label22.TabIndex = 50;
+            this.label22.Text = "label22";
+            this.label22.Visible = false;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label23.ForeColor = System.Drawing.Color.DarkRed;
+            this.label23.Location = new System.Drawing.Point(117, 429);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(44, 13);
+            this.label23.TabIndex = 51;
+            this.label23.Text = "label23";
+            this.label23.Visible = false;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(263, 824);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(61, 15);
+            this.label24.TabIndex = 52;
+            this.label24.Text = "pracaError";
+            this.label24.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(627, 900);
+            this.Controls.Add(this.label24);
+            this.Controls.Add(this.label23);
+            this.Controls.Add(this.label22);
             this.Controls.Add(this.textBox23);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox21);
@@ -609,6 +651,9 @@ namespace Formularz
         private TextBox textBox21;
         private TextBox textBox22;
         private TextBox textBox23;
-
+        private ToolTip toolTip1;
+        public Label label22;
+        public Label label23;
+        public Label label24;
     }
 }

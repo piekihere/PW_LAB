@@ -1,3 +1,4 @@
+using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace Formularz
@@ -11,12 +12,36 @@ namespace Formularz
 
         private void button1_Click(object sender, EventArgs e)//save
         {
-            Student s1 = new Student(textBox5.Text, textBox6.Text, textBox7.Text);
-            Student s2 = new Student(textBox8.Text, textBox9.Text, textBox10.Text);
-            Student s3 = new Student(textBox11.Text, textBox12.Text, textBox13.Text);
-            Student s4 = new Student(textBox22.Text, textBox21.Text, textBox2.Text);
-            Student[] input = { s1, s2, s3, s4 };
-            List<Student> StudentList = new List<Student>(input); 
+            label22.Visible = false;
+            label23.Visible = false;
+            label24.Visible = false;
+            try
+            {
+                Uczelnia uczelnia = new(textBox1.Text, comboBox3.Text, textBox3.Text, textBox4.Text, comboBox1.Text, comboBox2.Text);
+            }
+            catch (UczelniaException Exception)
+            {
+                label22.Text = Exception.Message;
+                label22.ForeColor = Color.Red;
+                label22.Visible = true;
+                return;
+            }
+            catch (StudentException Exception)
+            {
+                label23.Text = Exception.Message;
+                label23.ForeColor = Color.Red;
+                label23.Visible = true;
+                return;
+            }
+            catch (PracaException Exception)
+            {
+                label24.Text = Exception.Message;
+                label24.ForeColor = Color.Red;
+                label24.Visible = true;
+                return;
+            }
+
+
         }
 
         private void button2_Click(object sender, EventArgs e)//load
@@ -26,8 +51,11 @@ namespace Formularz
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            textBox1.Text = "Politehnika Poznañska";
-            
+            textBox1.Text = "Politechnika Poznañska";
+            textBox1.Enabled = false;
+            comboBox1.SelectedIndex = 0;
+            comboBox2.SelectedIndex = 0;
+            comboBox3.SelectedIndex = 0;
         }
 
         private void textBox16_TextChanged(object sender, EventArgs e)
