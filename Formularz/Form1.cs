@@ -102,6 +102,10 @@ namespace Formularz
 
         private void button2_Click(object sender, EventArgs e)//load
         {
+            label22.Visible = false;
+            label23.Visible = false;
+            label24.Visible = false;
+            label25.Visible = false;
             OpenFileDialog OpenFileDialog1 = new OpenFileDialog();
             XmlSerializer serializer = new XmlSerializer(typeof(Kontener));
             Kontener kontener = new Kontener();
@@ -109,31 +113,32 @@ namespace Formularz
             {
                 TextReader reader = new StreamReader(OpenFileDialog1.FileName);
                 kontener = (Kontener)serializer.Deserialize(reader);
+
+
+                //uczelnia
+                textBox1.Text = kontener.uczelnia;
+                comboBox3.SelectedText = kontener.kierunek;
+                textBox3.Text = kontener.zakres;
+                textBox4.Text = kontener.profil;
+                comboBox1.SelectedText = kontener.forma;
+                comboBox2.SelectedText = kontener.poziom;
+
+                //student
+                textBox5.Text = kontener.imie[0]; textBox6.Text = kontener.indeks[0]; textBox7.Text = kontener.data[0];
+                textBox8.Text = kontener.imie[1]; textBox9.Text = kontener.indeks[1]; textBox10.Text = kontener.data[1];
+                textBox11.Text = kontener.imie[2]; textBox12.Text = kontener.indeks[2]; textBox13.Text = kontener.data[2];
+                textBox22.Text = kontener.imie[3]; textBox21.Text = kontener.indeks[3]; textBox2.Text = kontener.data[3];
+
+                //praca dyplomowa
+                textBox14.Text = kontener.tytul;
+                textBox15.Text = kontener.tytul_eng;
+                textBox16.Text = kontener.dane_wejsciowe;
+                textBox17.Text = kontener.zakres_pracy;
+                textBox18.Text = kontener.termin;
+                textBox19.Text = kontener.promotor;
+                textBox20.Text = kontener.jednostka_organizacyjna;
+                textBox23.Text = kontener.podpis;
             }
-
-            //uczelnia
-            textBox1.Text = kontener.uczelnia;
-            comboBox3.SelectedText = kontener.kierunek;
-            textBox3.Text = kontener.zakres;
-            textBox4.Text = kontener.profil;
-            comboBox1.SelectedText = kontener.forma;
-            comboBox2.SelectedText = kontener.poziom;
-
-            //student
-            textBox5.Text = kontener.imie[0] ; textBox6.Text = kontener.indeks[0]; textBox7.Text = kontener.data[0];
-            textBox8.Text = kontener.imie[1]; textBox9.Text = kontener.indeks[1]; textBox10.Text = kontener.data[1];
-            textBox11.Text = kontener.imie[2]; textBox12.Text = kontener.indeks[2]; textBox13.Text = kontener.data[2];
-            textBox22.Text = kontener.imie[3]; textBox21.Text = kontener.indeks[3]; textBox2.Text = kontener.data[3];
-
-            //praca dyplomowa
-            textBox14.Text = kontener.tytul;
-            textBox15.Text =kontener.tytul_eng;
-            textBox16.Text =kontener.dane_wejsciowe;
-            textBox17.Text =kontener.zakres_pracy;
-            textBox18.Text =kontener.termin;
-            textBox19.Text =kontener.promotor;
-            textBox20.Text =kontener.jednostka_organizacyjna;
-            textBox23.Text =kontener.podpis;
 
         }
 
@@ -145,5 +150,6 @@ namespace Formularz
             comboBox2.SelectedIndex = 0;
             comboBox3.SelectedIndex = 0;
         }
+
     }
 }

@@ -83,6 +83,8 @@ namespace Formularz
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -542,11 +544,34 @@ namespace Formularz
             this.label25.Text = "label25";
             this.label25.Visible = false;
             // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(17, 188);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(432, 15);
+            this.label26.TabIndex = 54;
+            this.label26.Text = "---------------------------------------------------------------------------------" +
+    "-----------------------";
+
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(17, 442);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(432, 15);
+            this.label27.TabIndex = 55;
+            this.label27.Text = "---------------------------------------------------------------------------------" +
+    "-----------------------";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(627, 900);
+            this.Controls.Add(this.label27);
+            this.Controls.Add(this.label26);
             this.Controls.Add(this.label25);
             this.Controls.Add(this.label24);
             this.Controls.Add(this.label23);
@@ -663,5 +688,7 @@ namespace Formularz
         public Label label23;
         public Label label24;
         private Label label25;
+        private Label label26;
+        private Label label27;
     }
 }
