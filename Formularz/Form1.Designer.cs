@@ -30,7 +30,6 @@ namespace Formularz
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -80,10 +79,10 @@ namespace Formularz
             this.textBox21 = new System.Windows.Forms.TextBox();
             this.textBox22 = new System.Windows.Forms.TextBox();
             this.textBox23 = new System.Windows.Forms.TextBox();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -535,11 +534,23 @@ namespace Formularz
             this.label24.Text = "pracaError";
             this.label24.Visible = false;
             // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label25.Location = new System.Drawing.Point(104, 877);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(44, 13);
+            this.label25.TabIndex = 53;
+            this.label25.Text = "label25";
+            this.label25.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(627, 900);
+            this.Controls.Add(this.label25);
             this.Controls.Add(this.label24);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.label22);
@@ -651,9 +662,10 @@ namespace Formularz
         private TextBox textBox21;
         private TextBox textBox22;
         private TextBox textBox23;
-        private ToolTip toolTip1;
         public Label label22;
         public Label label23;
         public Label label24;
+        public List<Student> StudentList = new List<Student>();
+        private Label label25;
     }
 }
