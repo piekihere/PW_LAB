@@ -8,10 +8,10 @@ namespace Formularz
 {
     public class Student
     {
-        string imie;
-        string indeks;
-        string data;
-
+        public string imie;
+        public string indeks;
+        public string data;
+        public Student() { }
         public Student(string imie, string indeks,string data)
         {
             foreach(char c in imie)

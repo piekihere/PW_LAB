@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Formularz
 {
-    internal class Praca
+    public class Praca
     {
 
 
@@ -19,6 +19,7 @@ namespace Formularz
         string termin;
         string promotor;
         string jednostka_organizacyjna;
+        public Praca(){}
         public Praca(string tytul, string tytul_eng, string dane_wejsciowe, string zakres_pracy, string termin, string promotor, string jednostka_organizacyjna)
         {
 

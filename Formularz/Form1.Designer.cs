@@ -228,7 +228,6 @@ namespace Formularz
             this.label16.Size = new System.Drawing.Size(94, 15);
             this.label16.TabIndex = 15;
             this.label16.Text = "Dane wejściowe:";
-            this.label16.Click += new System.EventHandler(this.label16_Click);
             // 
             // label17
             // 
@@ -274,7 +273,6 @@ namespace Formularz
             this.label21.Size = new System.Drawing.Size(31, 15);
             this.label21.TabIndex = 20;
             this.label21.Text = "Data";
-            this.label21.Click += new System.EventHandler(this.label21_Click);
             // 
             // textBox1
             // 
@@ -406,7 +404,6 @@ namespace Formularz
             this.textBox16.Name = "textBox16";
             this.textBox16.Size = new System.Drawing.Size(246, 54);
             this.textBox16.TabIndex = 38;
-            this.textBox16.TextChanged += new System.EventHandler(this.textBox16_TextChanged);
             // 
             // textBox17
             // 
@@ -665,7 +662,6 @@ namespace Formularz
         public Label label22;
         public Label label23;
         public Label label24;
-        public List<Student> StudentList = new List<Student>();
         private Label label25;
     }
 }

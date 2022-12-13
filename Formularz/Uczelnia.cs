@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Formularz
 {
-    internal class Uczelnia
+    public class Uczelnia
     {
         string uczelnia;
         string kierunek;
@@ -14,6 +14,7 @@ namespace Formularz
         string profil;
         string forma;
         string poziom;
+        public Uczelnia() { }
         public Uczelnia(string uczelnia, string kierunek, string zakres, string profil, string forma, string poziom)
         {
             this.uczelnia = uczelnia;
