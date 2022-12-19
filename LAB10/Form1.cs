@@ -6,6 +6,8 @@ namespace LAB10
 {
     public partial class Form1 : Form
     {
+        public double currentPos;
+        public bool pause = false;
         public Form1()
         {
             InitializeComponent();
@@ -16,26 +18,32 @@ namespace LAB10
 
             if (dataGridView1.Rows.Count > 0 && dataGridView1.SelectedRows.Count > 0)
             {
+/*                if (pause)
+                {
+                    MusicPlayer.Play();
+                    MusicPlayer.Seek(currentPos);
+                    pause = false;
+                    return;
+                }*/
                 if (checkBox1.Checked)
                 {
                     Random rand = new Random();
                     string random = MusicVault.ElementAt(rand.Next(0, MusicVault.Count)).Value;
                     MusicPlayer.SoundLocation = random;
                     MusicPlayer.Play();
+                    return;
 
                 }
-                else
+                foreach (KeyValuePair<string, string> track in MusicVault)
                 {
-                    foreach (KeyValuePair<string, string> track in MusicVault)
+                    if (track.Key == dataGridView1.SelectedRows[0].Cells[1].Value.ToString())
                     {
-                        if (track.Key == dataGridView1.SelectedRows[0].Cells[1].Value.ToString())
-                        {
-                            MusicPlayer.SoundLocation = track.Value;
-                            MusicPlayer.Play();
-                            break;
-                        }
+                        MusicPlayer.SoundLocation = track.Value;
+                        MusicPlayer.Play();
+                        break;
                     }
                 }
+                
 
             }
         }
@@ -64,9 +72,10 @@ namespace LAB10
 
         private void button2_Click(object sender, EventArgs e)
         {
-/*            double currentPos = MusicPlayer.CurrentPosition;
-            MusicPlayer.Play();
-            MusicPlayer.Seek(currentPos);*/
+
+/*            currentPos = MusicPlayer.CurrentPosition;
+            pause = true;*/
+
         }
 
         private void button3_Click(object sender, EventArgs e)
