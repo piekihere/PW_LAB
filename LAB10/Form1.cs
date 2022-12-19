@@ -1,4 +1,6 @@
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
 
 namespace LAB10
 {
@@ -16,17 +18,22 @@ namespace LAB10
             {
                 if (checkBox1.Checked)
                 {
-                    Random rnd = new Random();
-                    int keyNumber = rnd.Next(0, MusicVault.Count());
-                    
+                    Random rand = new Random();
+                    string random = MusicVault.ElementAt(rand.Next(0, MusicVault.Count)).Value;
+                    MusicPlayer.SoundLocation = random;
+                    MusicPlayer.Play();
+
                 }
-                foreach (KeyValuePair<string, string> track in MusicVault)
+                else
                 {
-                    if (track.Key == dataGridView1.SelectedRows[0].Cells[1].Value.ToString())
+                    foreach (KeyValuePair<string, string> track in MusicVault)
                     {
-                        MusicPlayer.SoundLocation = track.Value;
-                        MusicPlayer.Play();
-                        break;
+                        if (track.Key == dataGridView1.SelectedRows[0].Cells[1].Value.ToString())
+                        {
+                            MusicPlayer.SoundLocation = track.Value;
+                            MusicPlayer.Play();
+                            break;
+                        }
                     }
                 }
 
@@ -57,6 +64,9 @@ namespace LAB10
 
         private void button2_Click(object sender, EventArgs e)
         {
+/*            double currentPos = MusicPlayer.CurrentPosition;
+            MusicPlayer.Play();
+            MusicPlayer.Seek(currentPos);*/
         }
 
         private void button3_Click(object sender, EventArgs e)
