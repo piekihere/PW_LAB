@@ -42,11 +42,11 @@ namespace LAB11
                     }
                     if (other.checkBox3.Checked)
                     {
-                        details.AppendLine("Liczba pasazerow: " + lotnisko.pasazerowie);
+                        details.AppendLine("Liczba pasażerów: " + lotnisko.pasazerowie);
                     }
                     if (other.checkBox4.Checked)
                     {
-                        details.AppendLine("Wojewodztwo: " + lotnisko.wojewodztwo);
+                        details.AppendLine("Województwo: " + lotnisko.wojewodztwo);
                     }
                     if (other.checkBox5.Checked)
                     {

@@ -44,7 +44,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(120, 72);
             this.button1.TabIndex = 1;
-            this.button1.Text = "Sczegoly";
+            this.button1.Text = "Szczegóły";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -75,7 +75,7 @@
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(117, 19);
             this.checkBox3.TabIndex = 4;
-            this.checkBox3.Text = "Liczba pasazerow";
+            this.checkBox3.Text = "Liczba pasażerów";
             this.checkBox3.UseVisualStyleBackColor = true;
             // 
             // checkBox4
@@ -85,7 +85,7 @@
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(101, 19);
             this.checkBox4.TabIndex = 5;
-            this.checkBox4.Text = "Wojewodztwo";
+            this.checkBox4.Text = "Województwo";
             this.checkBox4.UseVisualStyleBackColor = true;
             // 
             // checkBox5
@@ -116,7 +116,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(170, 25);
             this.label1.TabIndex = 8;
-            this.label1.Text = "Lista lotnisk";
+            this.label1.Text = "Lista lotnisk :)";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Form1
@@ -133,7 +133,7 @@
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Lotniska";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
